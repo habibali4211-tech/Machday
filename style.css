@@ -1,0 +1,229 @@
+/* ===== ڕێکخستنی گشتی ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* پانی و بەرزی بە پادینگەوە حیساب دەکات */
+}
+
+/* ===== باکگراوند: یاریگای تۆپی پێ =====
+   چەند gradient لەسەر یەک دانراون:
+   1) ڕەنگی تاریک بۆ ئەوەی نووسین دیار بێت
+   2) هێڵە ستوونیەکانی گژوگیای یاریگا
+   3) ڕەنگی سەوزی بنەڕەتی */
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
+    repeating-linear-gradient(
+      90deg,
+      #2e8b3d 0px,
+      #2e8b3d 80px,
+      #35a046 80px,
+      #35a046 160px
+    );
+  background-attachment: fixed; /* باکگراوند جێگیر دەمێنێتەوە لە کاتی سکڕۆڵ */
+}
+
+/* ===== هێدەری گۆلەکان ===== */
+.goals-header {
+  background: linear-gradient(135deg, #0b3d1e, #145a32);
+  border-bottom: 4px solid #ffd700; /* هێڵی زێڕین */
+  text-align: center;
+  padding: 24px 16px 28px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: 2rem;
+  color: #ffd700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* ===== تابلۆی ئەنجام =====
+   display:flex دوو تیم و ئەنجامەکە لە یەک ڕیزدا دادەنێت */
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.team-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.score {
+  display: flex;
+  gap: 12px;
+  font-size: 3rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 6px 24px;
+  border-radius: 12px;
+  color: #ffd700;
+}
+
+.dash {
+  color: #fff;
+}
+
+/* ===== لیستی گۆلەکان ===== */
+.goals-title {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #ffd700;
+}
+
+.goals-list {
+  list-style: none;       /* خاڵەکانی لیست لادەبات */
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.goals-list li {
+  background: rgba(255, 255, 255, 0.12);
+  margin-bottom: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-align: right;
+}
+
+.minute {
+  display: inline-block;
+  min-width: 42px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.goals-list small {
+  opacity: 0.75;
+}
+
+/* ===== ناوەڕۆک ===== */
+.content {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 12px;
+  line-height: 1.8;
+}
+
+.card h2 {
+  margin-bottom: 8px;
+  color: #ffd700;
+}
+
+/* ===== هێدەری گۆلەکانی یاری (ڤیدیۆ) ===== */
+.videos-header {
+  margin-top: 28px;
+  padding: 16px;
+  text-align: center;
+  background: linear-gradient(135deg, #0b3d1e, #145a32);
+  border-bottom: 4px solid #ffd700;
+  border-radius: 12px 12px 0 0;
+}
+
+.videos-header h2 {
+  color: #ffd700;
+  font-size: 1.5rem;
+}
+
+.videos-header p {
+  opacity: 0.85;
+  margin-top: 4px;
+}
+
+.video-card {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 0 0 12px 12px;
+}
+
+.video-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* aspect-ratio ڤیدیۆکە بە شێوەی 16:9 دادەنێت */
+.video-box {
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-box video,
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ===== ئەنجامی یاریەکان ===== */
+.section-title {
+  margin: 28px 0 12px;
+  color: #ffd700;
+}
+
+/* هەر یاریەک کارتێکە */
+.match {
+  background: rgba(0, 0, 0, 0.5);
+  border-right: 4px solid #ffd700; /* هێڵی زێڕین لای ڕاست */
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+}
+
+/* ڕیزی سەرەوە: تیم - ئەنجام - تیم */
+.match-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.match-score {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffd700;
+  padding: 2px 14px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+}
+
+.match-goals {
+  list-style: none;
+}
+
+.match-goals li {
+  padding: 6px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.no-goals {
+  opacity: 0.7;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.8;
+}
+
+/* ===== مۆبایل ===== */
+@media (max-width: 500px) {
+  .score { font-size: 2.2rem; padding: 4px 16px; }
+  .team-name { font-size: 1.1rem; }
+  .scoreboard { gap: 12px; }
+}

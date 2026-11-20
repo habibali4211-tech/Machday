@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- lang="ckb" واتە کوردی سۆرانی، dir="rtl" واتە لە ڕاستەوە بۆ چەپ -->
+<html lang="ckb" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habib Sport | تۆپی پێ</title>
+  <!-- فایلی CSS لێرە بەستراوەتەوە -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== هێدەر: گۆلەکانی یاری ===== -->
+  <header class="goals-header">
+    <h1 class="logo">⚽ Habib Sport</h1>
+
+    <div class="scoreboard">
+      <div class="team">
+        <span class="team-name">بارسێلۆنا</span>
+      </div>
+
+      <div class="score">
+        <span>2</span>
+        <span class="dash">-</span>
+        <span>1</span>
+      </div>
+
+      <div class="team">
+        <span class="team-name">ریال مەدرید</span>
+      </div>
+    </div>
+
+    <h2 class="goals-title">گۆلەکانی یاری</h2>
+
+    <ul class="goals-list">
+      <li><span class="minute">12'</span> ⚽ ئاسۆ ئەحمەد <small>(بارسێلۆنا)</small></li>
+      <li><span class="minute">38'</span> ⚽ ڕێبوار کەریم <small>(بارسێلۆنا)</small></li>
+      <li><span class="minute">74'</span> ⚽ ئاسۆ ئەحمەد <small>(ریال)</small></li>
+    </ul>
+  </header>
+
+  <!-- ===== ناوەڕۆکی سایتەکە ===== -->
+  <main class="content">
+    <section class="card">
+      <h2>بەخێربێن بۆ Habib Sport</h2>
+      <p>لێرە دەتوانیت دوایین هەواڵ و ئەنجامی یاریەکانی تۆپی پێ ببینیت.</p>
+    </section>
+
+    <!-- ===== هێدەر: گۆلەکانی یاری (ڤیدیۆ) =====
+         هەر جارێک یاریەک دادەنێیت، یەک <article class="video-card"> زیاد بکە.
+         ١) ڤیدیۆکە لە فۆڵدەری videos دابنێ (لە تەنیشت index.html)
+         ٢) ناوی فایلەکە لە src بنووسە، بۆ نموونە videos/match1.mp4 -->
+    <header class="videos-header">
+      <h2>⚽ گۆلەکانی یاری</h2>
+      <p>دوایین گۆلەکانی یاریەکان</p>
+    </header>
+
+    <!-- ڤیدیۆی یاری ١ -->
+    <article class="video-card">
+      <h3>هەولێر 1 - 1 دهۆک</h3>
+      <div class="video-box">
+        <video controls preload="metadata">
+          <source src="C:\Users\wwwha\Downloads/video_2026-11-20_22-29-27.mp4" type="video/mp4">
+          وێبگەڕەکەت ڤیدیۆ پشتگیری ناکات.
+        </video>
+        
+      </div>
+      <div class="video-box">
+        <video controls preload="metadata">
+          <source src="C:\Users\wwwha\Downloads/video_2026-11-20_22-29-37.mp4" type="video/mp4">
+          وێبگەڕەکەت ڤیدیۆ پشتگیری ناکات.
+        </video>
+        
+      </div>
+    </article>
+
+    
+
+    <!-- ئەگەر ڤیدیۆکەت لە یوتوبە، ئەمە بەکاربهێنە لە جیاتی <video>:
+    <div class="video-box">
+      <iframe src="https://www.youtube.com/embed/ID_I_VIDEO" allowfullscreen></iframe>
+    </div>
+    -->
+
+    <!-- ===== ئەنجامی یاریە تەواوبووەکان =====
+         هەر یاریەک یەک <article class="match"> ـە.
+         بۆ زیادکردنی یاریەکی نوێ: هەموو <article> ـەکە کۆپی بکە،
+         لە دوای دوایین یاری پەیستی بکە و ناو و ئەنجام و گۆلەکان بگۆڕە. -->
+    <h2 class="section-title">ئەنجامی یاریەکان</h2>
+
+    <!-- یاری ١ -->
+    <article class="match">
+      <div class="match-head">
+        <span class="match-team">ئەستێرە</span>
+        <span class="match-score" dir="ltr">2 - 1</span>
+        <span class="match-team">شێرەکان</span>
+      </div>
+      <ul class="match-goals">
+        <li><span class="minute">12'</span> ⚽ ئاسۆ ئەحمەد <small>(ئەستێرە)</small></li>
+        <li><span class="minute">38'</span> ⚽ ڕێبوار کەریم <small>(شێرەکان)</small></li>
+        <li><span class="minute">74'</span> ⚽ ئاسۆ ئەحمەد <small>(ئەستێرە)</small></li>
+      </ul>
+    </article>
+
+    <!-- یاری ٢ -->
+    <article class="match">
+      <div class="match-head">
+        <span class="match-team">هەولێر</span>
+        <span class="match-score" dir="ltr">1 - 1</span>
+        <span class="match-team">دهۆک</span>
+      </div>
+      <ul class="match-goals">
+        <li class="no-goals">هیچ گۆڵێک نەبوو</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="footer">© 2026 Habib Sport</footer>
+
+</body>
+</html>
